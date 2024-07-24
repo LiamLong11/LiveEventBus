@@ -34,25 +34,10 @@ LiveEventBus | :white_check_mark: | :white_check_mark: | :white_check_mark: | :w
 > 1.8及以上版本全面迁移至maven，同时groupID变为io.github.jeremyliao，1.8以下版本保留JCenter
 #### maven
 
-- 非AndroidX
-```
-implementation 'io.github.jeremyliao:live-event-bus:1.8.0'
-```
 - AndroidX
 ```
-implementation 'io.github.jeremyliao:live-event-bus-x:1.8.0'
+implementation 'io.github.jeremyliao:live-event-bus:1.11.0'
 ```
-#### JCenter
-- 非AndroidX
-
-```
-implementation 'com.jeremyliao:live-event-bus:1.7.3'
-```
-- AndroidX
-```
-implementation 'com.jeremyliao:live-event-bus-x:1.7.3'
-```
-
 ## 快速开始
 ### 订阅消息
 - 以生命周期感知模式订阅消息

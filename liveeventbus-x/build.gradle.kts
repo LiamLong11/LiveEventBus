@@ -28,7 +28,7 @@ dependencies {
 
 
 //=============================maven publish start=============================
-val _groupId = "com.donnermusic"
+val _groupId = "com.github.LiamLong11"
 val _artifactId = "live-event-bus-x"
 val _version = "1.9.0"
 publishing { // 发布配置
