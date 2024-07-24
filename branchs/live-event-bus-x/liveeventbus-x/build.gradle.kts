@@ -31,22 +31,16 @@ dependencies {
 val _groupId = "com.donnermusic"
 val _artifactId = "live-event-bus-x"
 val _version = "1.9.0"
-afterEvaluate {
-    publishing {
-        publications {
-// Creates a Maven publication called “release”.
-//            create("release") {
-//// Applies the component for the release build variant.
-//// from(components["release"])
-//// You can then customize attributes of the publication as shown below.
-//                group = _groupId
-//                artifactId = _artifactId
-//                version = _version
-//            }
-            register("live-event-bus-x", MavenPublication::class){
-                group = _groupId
-                artifactId = _artifactId
-                version = _version
+publishing { // 发布配置
+    publications { // 发布的内容
+        register<MavenPublication>("release") { // 注册一个名字为 release 的发布内容
+            groupId = _groupId
+            artifactId = _artifactId
+            version = _version
+
+            afterEvaluate { // 在所有的配置都完成之后执行
+                // 从当前 module 的 release 包中发布
+                from(components["release"])
             }
         }
     }
