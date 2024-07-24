@@ -30,7 +30,7 @@ dependencies {
 //=============================maven publish start=============================
 val _groupId = "com.github.LiamLong11"
 val _artifactId = "live-event-bus-x"
-val _version = "1.9.0"
+val _version = "1.11.0"
 publishing { // 发布配置
     publications { // 发布的内容
         register<MavenPublication>("release") { // 注册一个名字为 release 的发布内容

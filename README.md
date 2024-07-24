@@ -4,6 +4,9 @@
 LiveEventBus是一款Android消息总线，基于LiveData，具有生命周期感知能力，支持Sticky，支持AndroidX，支持跨进程，支持跨APP
 ![logo](https://user-images.githubusercontent.com/23290617/68295106-97e64380-00cc-11ea-919d-605f123ec084.png)
 
+#### fork from:[LiveEventBus](https://github.com/JeremyLiao/LiveEventBus)
+#### 由于原项目未打出 Android 14版本的新包，故 fork 下来，打包到maven;此项目仅支持Android X
+
 ## 为什么要用LiveEventBus
 ##### 生命周期感知
 - [x] 消息随时订阅，自动取消订阅
@@ -31,12 +34,14 @@ LiveEventBus | :white_check_mark: | :white_check_mark: | :white_check_mark: | :w
 #### 想了解更多？请点击：[全面了解Android消息总线](https://github.com/JeremyLiao/SmartEventBus/blob/master/docs/bus_all.md)
 
 ## 使用
-> 1.8及以上版本全面迁移至maven，同时groupID变为io.github.jeremyliao，1.8以下版本保留JCenter
+> 1.11.0 
 #### maven
-
-- AndroidX
 ```
-implementation 'io.github.jeremyliao:live-event-bus:1.11.0'
+    maven(uri("https://jitpack.io"))
+```
+- Android(only support android x)
+```
+implementation ("com.github.LiamLong11:LiveEventBus:1.11.0")
 ```
 ## 快速开始
 ### 订阅消息
@@ -216,13 +221,6 @@ LiveEventBus
 #### 更多配置信息，请点击：[LiveEventBus的配置](docs/config.md)
 
 ## 混淆规则
-```
--dontwarn com.jeremyliao.liveeventbus.**
--keep class com.jeremyliao.liveeventbus.** { *; }
--keep class android.arch.lifecycle.** { *; }
--keep class android.arch.core.** { *; }
-```
-for androidx:
 ```
 -dontwarn com.jeremyliao.liveeventbus.**
 -keep class com.jeremyliao.liveeventbus.** { *; }
